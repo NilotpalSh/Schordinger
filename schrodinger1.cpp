@@ -32,7 +32,7 @@ int main(){
 
 int i;
 
-double xi,en1,en2,en3,eps=0.0001,h,xmax;
+double xi,en1,en2,en3,eps,h,xmax;
 
 double xi1,yi1,zi1,xi2,yi2,zi2,xi3,yi3,zi3;
 double yf1,zf1,yf2,zf2,yf3,zf3;
@@ -49,6 +49,7 @@ do{
 xi=0.01;
 h=0.01;
 xmax=20.0;
+eps=0.0001;
 
 xi1=h;
 yi1=h;
