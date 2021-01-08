@@ -7,10 +7,7 @@
 
 using namespace std;
 
-double e=3.795, m=0.511*pow(10,6), hbarc=1973,
-//a=3.0;
-//a=5.0;
-a=7.0;
+double e=3.795, m=0.511*pow(10,6), hbarc=1973,a=3.0;
 
 double v(double x){
     
@@ -27,7 +24,7 @@ double f2(double x, double y, double z, double en){
 
 int main(){
 
-    ofstream out("sch_2c.dat");
+    ofstream out("sch_2.dat");
     cout.precision(4);
     cout.setf(ios::scientific);
     out.precision(4);
@@ -44,7 +41,7 @@ double xa1[1999],ya1[1999],za1[1999];
 double xa2[1999],ya2[1999],za2[1999];
 double xa3[1999],ya3[1999],za3[1999];
 
-en1=-20.0;
+en1=-10.0;
 en2=-2.0;
 
 do{
