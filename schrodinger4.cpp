@@ -7,17 +7,14 @@
 
 using namespace std;
 
-double m=940*pow(10,6), D=0.755501, a=1.44, x0=0.131349, hbarc=1973;
+double m=940*pow(10,6),hbarc=1973;
 
-/*double xp(double x){
-
-    return (x-x0)/x;
- 
-    }*/
-
-double v(double x){
-
-    return D*(exp(-2*a*((x-x0)/x)-exp(-a*((x-x0)/x))));
+double v(double x)
+{
+double alpha=1.44,x0=0.131349,D=0.755501;
+double xprime;
+xprime=(x-x0)/x;
+return D*(exp(-2.0*alpha*xprime)-exp(-alpha*xprime));
 }
 
 double f1(double x, double y, double z, double en){
@@ -48,8 +45,8 @@ int main(){
     double xa2[1999],ya2[1999],za2[1999];
     double xa3[1999],ya3[1999],za3[1999];
 
-    en1=0.5;
-    en2=0.14;
+    en1=3.0;
+    en2=4.0;
 
 do{
     en3=(en1+en2)/2.0;
